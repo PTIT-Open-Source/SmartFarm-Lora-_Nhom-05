@@ -9,9 +9,10 @@ Dự án "Hệ thống giám sát và điều khiển nông nghiệp thông minh
 ## 📖 Mục lục
 
 - [🚀 Giới thiệu](#-giới-thiệu)
+- [🏗️ Kiến trúc hệ thống](#-kiến-trúc-hệ-thống)
 - [⚙️ Thông số kỹ thuật](#️-thông-số-kỹ-thuật)
 - [🧰 Danh sách linh kiện](#-danh-sách-linh-kiện)
-- [📐 Sơ đồ nguyên lý và PCB](#-sơ-đồ-nguyên-lý-và-pcb)
+- [📐 Sơ đồ nguyên lý](#-sơ-đồ-nguyên-lý)
 - [🛠️ Hướng dẫn lắp ráp](#️-hướng-dẫn-lắp-ráp)
 - [🧠 Lập trình firmware](#-lập-trình-firmware)
 - [🌐 Cách sử dụng](#-cách-sử-dụng)
@@ -47,7 +48,7 @@ Giáo dục – học thuật: hỗ trợ học tập và nghiên cứu trong l�
 Tiềm năng thương mại: có thể phát triển thành sản phẩm thực tế với chi phí thấp và khả năng mở rộng
 
 
-## 🏗️  Kiến trúc hệ thống
+## 🏗️ Kiến trúc hệ thống
 
 ESP32 Node 1 (Cảm biến)       ┐
                               ├──> Gateway ESP32 <──> Firebase <──> Trình duyệt Web / App
