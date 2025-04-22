@@ -51,7 +51,9 @@ Tiềm năng thương mại: có thể phát triển thành sản phẩm thực 
 ## 🏗️ Kiến trúc hệ thống
 
 ESP32 Node 1 (Cảm biến)       ┐
+
                               ├──> Gateway ESP32 <──> Firebase <──> Trình duyệt Web / App
+                              
 ESP32 Node 2 (Cảm biến)       ┘
 
 Node: đo thông số môi trường, gửi về Gateway qua LoRa.
