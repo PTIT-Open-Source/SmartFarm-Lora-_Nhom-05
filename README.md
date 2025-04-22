@@ -1,4 +1,4 @@
-# 🌐📡 HỆ THỐNG GIÁM SÁT VÀ ĐIỀU KHIỂN TỪ XA QUA LoRa VỚI ESP32
+# 🌐📡 HỆ THỐNG GIÁM SÁT NÔNG NGHIỆP THÔNG MINH VÀ ĐIỀU KHIỂN TỪ XA QUA LoRa VỚI ESP32
 
 ---
 
