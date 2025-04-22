@@ -46,6 +46,16 @@ Giáo dục – học thuật: hỗ trợ học tập và nghiên cứu trong l�
 
 Tiềm năng thương mại: có thể phát triển thành sản phẩm thực tế với chi phí thấp và khả năng mở rộng
 
+
+## 🏗️  Kiến trúc hệ thống
+
+ESP32 Node 1 (Cảm biến)       ┐
+                              ├──> Gateway ESP32 <──> Firebase <──> Trình duyệt Web / App
+ESP32 Node 2 (Cảm biến)       ┘
+
+Node: đo thông số môi trường, gửi về Gateway qua LoRa.
+Gateway: nhận dữ liệu, hiển thị Web UI và gửi dữ liệu lên Firebase.
+
 ## ⚙️ Thông số kỹ thuật
 
 | Thông số               | Chi tiết                                  |
@@ -75,7 +85,7 @@ Tiềm năng thương mại: có thể phát triển thành sản phẩm thực 
 
 ---
 
-## 📐 Sơ đồ nguyên lý và PCB
+## 📐 Sơ đồ nguyên lý
 
 
 
@@ -88,8 +98,8 @@ Tiềm năng thương mại: có thể phát triển thành sản phẩm thực 
 
 ## 🛠️ Hướng dẫn lắp ráp
 
-1. 🔌 Kết nối cảm biến với ESP32 Slave theo sơ đồ.
-2. 🔗 Nối module LoRa RA-02 với ESP32 qua SPI (MISO, MOSI, SCK, NSS).
+1. 🔗 Nối module LoRa RA-02 với ESP32 qua SPI (MISO, MOSI, SCK, NSS).
+2. 🔌 Kết nối DHT11, Soil Moisture, LDR vào các chân GPIO phù hợp.
 3. 💡 Gắn LED và điện trở vào các chân GPIO phù hợp.
 4. 📡 Cài đặt module LoRa lên ESP32 Master.
 5. ⚙️ Nạp firmware tương ứng cho Master và các Slave.
@@ -103,7 +113,7 @@ Tiềm năng thương mại: có thể phát triển thành sản phẩm thực 
 | File                    | Mô tả                                                               |
 |-------------------------|---------------------------------------------------------------------|
 | `gateway_websever.ino` | Firmware cho ESP32 Master – giao tiếp LoRa, cập nhật Web Server    |
-| `n1.ino`                | Firmware cho Slave – đọc cảm biến, gửi dữ liệu qua LoRa            |
+| `slave1.ino`            | Firmware cho Slave1 – đọc cảm biến, gửi dữ liệu qua LoRa          | `slave2.ino`            | Firmware cho  – đọc cảm biến, gửi dữ liệu qua LoRa           |
 | `dashboard.h`           | Giao diện Web (HTML, CSS, JS nhúng trực tiếp trong code)           |
 
 ### 📚 Thư viện Arduino cần cài đặt:
@@ -114,8 +124,8 @@ Tiềm năng thương mại: có thể phát triển thành sản phẩm thực 
 - `AsyncTCP`
 - `DHT sensor library`
 - `Adafruit Unified Sensor`
+- - `Firebase ESP Client`
 
-💡 *Mẹo: Sử dụng Board Manager để chọn đúng ESP32 Dev Module.*
 
 ---
 
