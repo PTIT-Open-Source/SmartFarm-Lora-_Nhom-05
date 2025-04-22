@@ -188,4 +188,16 @@ Bạn có ý tưởng cải tiến hoặc phát hiện lỗi?
 Bạn có toàn quyền sử dụng, chỉnh sửa và phân phối lại với điều kiện giữ nguyên thông tin giấy phép.
 
 ---
+## ✍️ Tác giả
+Dự án được thực hiện bởi nhóm sinh viên:
+
+👨‍💻 Nguyễn Bá Bách
+
+👨‍💻 Hoàng Mạnh Quỳnh
+
+👨‍💻 Nguyễn Ngọc Lâm
+
+👨‍💻 Nguyễn Trọng Đạt
+
+Xin chân thành cảm ơn sự hỗ trợ và hướng dẫn từ giảng viên và nhà trường trong suốt quá trình thực hiện dự án.
 
