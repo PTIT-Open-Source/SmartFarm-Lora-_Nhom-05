@@ -128,95 +128,36 @@ Tiềm năng thương mại: có thể phát triển thành sản phẩm thực 
 
 5. 📊 Quan sát dữ liệu từ các Slave: Nhiệt độ, độ ẩm, ánh sáng, độ ẩm đất.
 6. 💡 Điều khiển bật/tắt LED từ giao diện Web.
-7. Đẩy dữ liệu lên Firebase
-   ☁️ Đẩy dữ liệu lên Firebase Realtime Database
-ESP32 Master có thể gửi dữ liệu cảm biến nhận được từ các Slave lên Firebase Realtime Database để lưu trữ và giám sát từ xa theo thời gian thực.
+7. ☁️ Đẩy dữ liệu lên Firebase Realtime Database
+ESP32 Master sẽ gửi dữ liệu cảm biến (nhiệt độ, độ ẩm, ánh sáng...) từ các Slave lên Firebase Realtime Database để lưu trữ và giám sát từ xa.
 
-📦 Yêu cầu thư viện:
-Cài đặt các thư viện sau trong Arduino IDE:
+📦 Thư viện cần thiết
+Cài đặt trong Arduino IDE:
 
 Firebase ESP32 Client by Mobizt
 
 ArduinoJson
 
-🔧 Thiết lập Firebase:
+🔧 Thiết lập Firebase
 Truy cập Firebase Console
 
-Tạo một project mới.
+Tạo Project mới.
 
-Vào mục Realtime Database → Create database → Chọn chế độ "test mode" để dễ phát triển.
+Vào Realtime Database → Create Database → Chọn chế độ Test mode
 
-Vào Project Settings → General → Lấy Project ID
+Vào Project Settings → General → lấy Project ID
 
-Vào tab Service Accounts → Generate new private key → Tải file .json về và lưu nội dung databaseURL và API key.
+Chọn tab Service Accounts → Generate new private key → Tải file .json
+→ Dùng để lấy databaseURL và API key
 
-🔑 Thêm thông tin cấu hình vào mã nguồn:
-cpp
-Sao chép
-Chỉnh sửa
-#include <WiFi.h>
-#include <Firebase_ESP_Client.h>
-#include "addons/TokenHelper.h"
-#include "addons/RTDBHelper.h"
+🔑 Cấu hình Firebase trong mã nguồn
 
-#define WIFI_SSID "your-ssid"
-#define WIFI_PASSWORD "your-password"
-#define API_KEY "your-api-key"
-#define DATABASE_URL "https://your-project-id.firebaseio.com/"  // Không có https:// ở đầu
+✅ Lưu ý
+Tạo Project bằng tài khoản Google.
 
-FirebaseData fbdo;
-FirebaseAuth auth;
-FirebaseConfig config;
+Có thể dùng chế độ Anonymous Authentication để không cần email/password.
 
-void setup() {
-  Serial.begin(115200);
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-  while (WiFi.status() != WL_CONNECTED) delay(300);
-
-  config.api_key = API_KEY;
-  config.database_url = DATABASE_URL;
-  auth.user.email = "your-email@gmail.com";
-  auth.user.password = "your-password";
-  Firebase.begin(&config, &auth);
-  Firebase.reconnectWiFi(true);
-}
-
-void loop() {
-  float temperature = 25.6;
-  float humidity = 70.2;
-  int light = 380;
-
-  if (Firebase.RTDB.setFloat(&fbdo, "/node1/temperature", temperature) &&
-      Firebase.RTDB.setFloat(&fbdo, "/node1/humidity", humidity) &&
-      Firebase.RTDB.setInt(&fbdo, "/node1/light", light)) {
-    Serial.println("Data pushed to Firebase!");
-  } else {
-    Serial.println("Firebase push failed: " + fbdo.errorReason());
-  }
-
-  delay(10000); // đẩy mỗi 10 giây
-}
-📊 Kết quả:
-Firebase sẽ lưu trữ dữ liệu theo dạng cây:
-
-json
-Sao chép
-Chỉnh sửa
-{
-  "node1": {
-    "temperature": 25.6,
-    "humidity": 70.2,
-    "light": 380
-  }
-}
-✅ Lưu ý:
-Tạo project bằng tài khoản Google.
-
-Nếu không muốn dùng email/password, có thể dùng Anonymous auth.
-
-Nếu có nhiều node (Slave), hãy đổi /node1/... thành /node2/... để dễ quản lý.
-
----
+Nếu có nhiều node (Slave), dùng đường dẫn /node2/..., /node3/... để phân biệt.
 
 ## ✅ Kiểm thử
 
