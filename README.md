@@ -124,8 +124,10 @@ Tiềm năng thương mại: có thể phát triển thành sản phẩm thực 
 1. 🔌 Cấp nguồn cho tất cả ESP32 (Master + Slave).
 2. 🖥️ Mở Serial Monitor, lấy địa chỉ IP từ Master.
 3. 🌍 Mở trình duyệt và truy cập địa chỉ IP đó.
-4. 📊 Quan sát dữ liệu từ các Slave: Nhiệt độ, độ ẩm, ánh sáng, độ ẩm đất.
-5. 💡 Điều khiển bật/tắt LED từ giao diện Web.
+4. ![image](https://github.com/user-attachments/assets/d5b4ecbb-c0c8-4612-b9db-8385282e0364)
+
+5. 📊 Quan sát dữ liệu từ các Slave: Nhiệt độ, độ ẩm, ánh sáng, độ ẩm đất.
+6. 💡 Điều khiển bật/tắt LED từ giao diện Web.
 
 ---
 
