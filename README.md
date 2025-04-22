@@ -1,6 +1,10 @@
 # 🌐📡 HỆ THỐNG GIÁM SÁT NÔNG NGHIỆP THÔNG MINH VÀ ĐIỀU KHIỂN TỪ XA QUA LoRa VỚI ESP32
 
----
+🎯 Mô tả ngắn gọn:
+
+Dự án "Hệ thống giám sát và điều khiển nông nghiệp thông minh sử dụng ESP32 & LoRa" là một giải pháp IoT ứng dụng trong nông nghiệp, cho phép giám sát các thông số môi trường như nhiệt độ, độ ẩm không khí (DHT11), cường độ ánh sáng (BH1750) và độ ẩm đất. Hệ thống sử dụng giao tiếp LoRa không dây giữa các node cảm biến ESP32 và ESP32 Gateway, nơi dữ liệu được hiển thị qua Web Server. Người dùng có thể quan sát thông tin môi trường thời gian thực và điều khiển thiết bị như quạt làm mát và hệ thống phun sương từ xa qua trình duyệt web.
+
+
 
 ## 📖 Mục lục
 
