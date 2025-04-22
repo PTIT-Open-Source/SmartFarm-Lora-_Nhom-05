@@ -77,7 +77,7 @@ Tiềm năng thương mại: có thể phát triển thành sản phẩm thực 
 
 ## 📐 Sơ đồ nguyên lý và PCB
 
-> 🖼️ **Thêm hình ảnh sơ đồ mạch hoặc thiết kế PCB tại đây.**
+
 
 📌 Có thể sử dụng phần mềm như:
 - [Fritzing](https://fritzing.org/)
@@ -131,20 +131,43 @@ Tiềm năng thương mại: có thể phát triển thành sản phẩm thực 
 
 ## ✅ Kiểm thử
 
-- 📡 Slave truyền đúng dữ liệu cảm biến về Master?
-- 🔁 Master có nhận đầy đủ dữ liệu?
-- 🌐 Giao diện Web hiển thị thông tin chính xác?
-- 💡 Kiểm tra chức năng bật/tắt LED có phản hồi thực tế không?
+Hệ thống đã được kiểm thử và hoạt động ổn định với các chức năng chính như sau:
+
+📡 Truyền dữ liệu LoRa: Các thiết bị Slave truyền dữ liệu cảm biến (BH1750, DHT11, độ ẩm đất) về thiết bị Master một cách chính xác và liên tục.
+
+🔁 Nhận dữ liệu: Thiết bị Master nhận đầy đủ và kịp thời dữ liệu từ các node Slave thông qua giao tiếp LoRa 433MHz.
+
+🌐 Giao diện Web: Giao diện Web Server trên ESP32 Master hiển thị chính xác các thông số môi trường:
+
+🌡️ Nhiệt độ
+
+💧 Độ ẩm không khí
+
+☀️ Cường độ ánh sáng
+
+🌱 Độ ẩm đất
+
+💡 Điều khiển thiết bị: Chức năng bật/tắt quạt và phun sương hoạt động tốt, phản hồi thực tế nhanh chóng sau khi thao tác trên Web.
+
+🔒 Độ ổn định: Hệ thống hoạt động liên tục và ổn định trong các thử nghiệm thực tế, không xảy ra treo hoặc mất kết nối.
 
 ---
 
 ## 📸 Ảnh / Video demo
 
-> Thêm ảnh minh họa và video mô phỏng hoặc quay thực tế hệ thống tại đây.
 
-- 🖼️ Sơ đồ mạch kết nối
-- 🎥 Video demo hoạt động hệ thống
-- 📎 Đường dẫn: [YouTube / Google Drive]
+- 🖼️ Sơ đồ hệ thống
+  ![image](https://github.com/user-attachments/assets/e04026bb-c00a-4e08-9c98-51f3bc12fc3d)
+
+- Hoàn thiện mô hình hệ thống (sản phẩm )
+  ![image](https://github.com/user-attachments/assets/9ebd7501-bb16-4ad8-b558-ee1f6ac611c0)
+
+- Demo kết quả
+  Dữ liệu được hiển thị lên webwerver và điều khiển các thiết bị từ xa
+  ![image](https://github.com/user-attachments/assets/98a4548b-dd76-4181-8722-bc7d4055ee37)
+
+- Log dữ liệu chạy trong nhiều ngày liên tục
+  ![image](https://github.com/user-attachments/assets/f5cf74f7-0420-4dfc-964f-8d6b89d5c80d)
 
 ---
 
