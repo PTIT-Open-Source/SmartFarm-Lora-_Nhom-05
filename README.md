@@ -160,14 +160,18 @@ Hệ thống đã được kiểm thử và hoạt động ổn định với c�
   ![image](https://github.com/user-attachments/assets/e04026bb-c00a-4e08-9c98-51f3bc12fc3d)
 
 - Hoàn thiện mô hình hệ thống (sản phẩm )
-  ![image](https://github.com/user-attachments/assets/9ebd7501-bb16-4ad8-b558-ee1f6ac611c0)
-
+  ![image](https://github.com/user-attachments/assets/5cc79b0c-3ba8-412b-9333-7e4858604de6)
+  
 - Demo kết quả
   Dữ liệu được hiển thị lên webwerver và điều khiển các thiết bị từ xa
   ![image](https://github.com/user-attachments/assets/98a4548b-dd76-4181-8722-bc7d4055ee37)
 
 - Log dữ liệu chạy trong nhiều ngày liên tục
   ![image](https://github.com/user-attachments/assets/f5cf74f7-0420-4dfc-964f-8d6b89d5c80d)
+
+  -Kiểm thử đo khả năng truyền nhận dữ liệu qua Lora ở khoảng cách xa trong thực tế
+  ![image](https://github.com/user-attachments/assets/41bed124-c67a-4cc8-ace4-589d019a4068)
+
 
 ---
 
