@@ -9,7 +9,7 @@ Dự án "Hệ thống giám sát và điều khiển nông nghiệp thông minh
 ## 📖 Mục lục
 
 - [🚀 Giới thiệu](#-giới-thiệu)
-- [🏗️ Kiến trúc hệ thống](#-kiến-trúc-hệ-thống)
+- [🏗️ Kiến trúc hệ thống](#%EF%B8%8F-kiến-trúc-hệ-thống)
 - [⚙️ Thông số kỹ thuật](#️-thông-số-kỹ-thuật)
 - [🧰 Danh sách linh kiện](#-danh-sách-linh-kiện)
 - [📐 Sơ đồ nguyên lý](#-sơ-đồ-nguyên-lý)
@@ -50,10 +50,8 @@ Tiềm năng thương mại: có thể phát triển thành sản phẩm thực 
 
 ## 🏗️ Kiến trúc hệ thống
 
-ESP32 Node 1 (Cảm biến)       ┐
-
-                              ├──> Gateway ESP32 <──> Firebase <──> Trình duyệt Web / App
-                              
+ESP32 Node 1 (Cảm biến)       ┐                             
+                              ├──> Gateway ESP32 <──> Firebase <──> Trình duyệt Web / App                              
 ESP32 Node 2 (Cảm biến)       ┘
 
 Node: đo thông số môi trường, gửi về Gateway qua LoRa.
