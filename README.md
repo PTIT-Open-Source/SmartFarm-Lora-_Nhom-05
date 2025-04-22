@@ -24,18 +24,27 @@ Dự án "Hệ thống giám sát và điều khiển nông nghiệp thông minh
 
 ## 🚀 Giới thiệu
 
-**ESP32 LoRa Web Server** là hệ thống giám sát và điều khiển từ xa thông qua giao tiếp **LoRa không dây** giữa các thiết bị **ESP32**, phù hợp cho các ứng dụng:
+📌 Tóm tắt dự án
+Dự án: Hệ thống nông nghiệp thông minh không dây sử dụng ESP32 và giao tiếp LoRa.
 
-- 🌾 Nông nghiệp thông minh  
-- 🌍 Giám sát môi trường  
-- 🏠 Nhà thông minh
+Chức năng chính:
+Giám sát và điều khiển từ xa các thông số môi trường như nhiệt độ, độ ẩm không khí, ánh sáng và độ ẩm đất thông qua giao diện Web. Hệ thống có thể điều khiển thiết bị như quạt làm mát và bơm/phun sương tự động hoặc thủ công.
 
-**Cấu trúc hệ thống:**
+Người dùng chính:
 
-- 🧠 **ESP32 Master**: Thu thập dữ liệu từ các slave, lưu trữ và hiển thị lên **giao diện Web**.
-- 📡 **ESP32 Slave (x2)**: Đọc dữ liệu từ cảm biến (nhiệt độ, độ ẩm, ánh sáng, độ ẩm đất) và truyền về master. Hỗ trợ điều khiển LED từ xa.
+Học sinh, sinh viên ngành kỹ thuật điện – điện tử, CNTT
 
----
+Kỹ sư nông nghiệp, nhà nghiên cứu
+
+Người làm vườn, nông dân ứng dụng công nghệ
+
+Mục tiêu:
+
+Giáo dục – học thuật: hỗ trợ học tập và nghiên cứu trong lĩnh vực IoT, điều khiển nhúng, và nông nghiệp thông minh.
+
+Ứng dụng thực tiễn: phục vụ các mô hình canh tác nhỏ, vườn thông minh tại gia, nhà lưới, nhà kính.
+
+Tiềm năng thương mại: có thể phát triển thành sản phẩm thực tế với chi phí thấp và khả năng mở rộng
 
 ## ⚙️ Thông số kỹ thuật
 
